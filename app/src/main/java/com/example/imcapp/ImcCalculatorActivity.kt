@@ -34,6 +34,6 @@ class ImcCalculatorActivity : AppCompatActivity() {
         setGenderColor()
     }
     private fun setGenderColor(){
-        maleview.setCardBackgroundColor()
+        //maleview.setCardBackgroundColor()
     }
 }
