@@ -32,15 +32,15 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private fun initListeners() {
 
         maleview.setOnClickListener{
-        setGenderColor()
+        setGenderColor(true)
     }
         femaleview.setOnClickListener{
-            setGenderColor()
+            setGenderColor(false)
         }
 
 
     }
-    private fun setGenderColor(){
+    private fun setGenderColor(isMaleSelected: Boolean){
         maleview.setCardBackgroundColor(getBackgroundColor(isMaleSelected))
         femaleview.setCardBackgroundColor(getBackgroundColor(!isMaleSelected))
     }
@@ -54,6 +54,6 @@ class ImcCalculatorActivity : AppCompatActivity() {
     }
 
     private fun initUI(){
-        setGenderColor()
+        setGenderColor(true)
     }
 }
