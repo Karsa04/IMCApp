@@ -23,6 +23,7 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private lateinit var btnAddAge: FloatingActionButton
     private lateinit var btnSubtractWeight: FloatingActionButton
     private lateinit var btnSubtractAge: FloatingActionButton
+    private lateinit var btnCalc: androidx.appcompat.widget.AppCompatButton
 
     var  operacion =true
     private var Weight =0
@@ -48,8 +49,9 @@ class ImcCalculatorActivity : AppCompatActivity() {
         pesoNum= findViewById(R.id.pesoNum)
         btnAddWeight= findViewById(R.id.btnAddAge)
         btnSubtractWeight= findViewById(R.id.btnSubtractAge)
-        btnAddAge= findViewById(R.id.btnaddAge2)
+        btnAddAge= findViewById(R.id.btnAddAge2)
         btnSubtractAge= findViewById(R.id.btnSubtractAge2)
+        btnCalc= findViewById(R.id.btnCalc)
     }
 
     private fun initListeners() {
