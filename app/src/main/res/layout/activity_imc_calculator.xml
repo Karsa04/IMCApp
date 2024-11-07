@@ -130,6 +130,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tvHeight"
                 android:text="120cm"
+                android:textColor="@color/white"
                 android:textSize="38sp"
                 android:textStyle="bold"
                 >
@@ -184,6 +185,18 @@
                 android:text="@string/peso"
                 android:textAllCaps="true"
                 android:textColor="@color/title_text"
+                >
+
+
+            </TextView>
+            <TextView
+                android:id="@+id/pesoNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAllCaps="true"
+                android:textSize="38sp"
+                android:textColor="@color/white"
                 >
 
 
@@ -254,6 +267,18 @@
                 android:text="@string/edad"
                 android:textAllCaps="true"
                 android:textColor="@color/title_text"
+                >
+
+
+            </TextView>
+            <TextView
+                android:id="@+id/edadNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAllCaps="true"
+                android:textSize="38sp"
+                android:textColor="@color/white"
                 >
 
 
