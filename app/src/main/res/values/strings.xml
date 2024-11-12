@@ -7,4 +7,13 @@
     <string name="pesoNum"></string>
     <string name="edad">Edad</string>
     <string name="Calcular">Calcular</string>
+    <string name="PesoInsu">Peso insuficiente</string>
+    <string name="PesoInsuEX">Peso por debajo de la media para una persona de tu edad.</string>
+    <string name="PesoNorm">Peso adecuado</string>
+    <string name="PesoNormEX">Peso en la media para una persona de tu edad.</string>
+    <string name="PesoSobreEX">Peso excedente para una persona de tu edad.</string>
+    <string name="PesoSobre">Sobrepeso</string>
+    <string name="PesoObe">Obesidad</string>
+    <string name="PesoObeEX">Riesgo para tu salud.</string>
+
 </resources>

@@ -1,5 +1,6 @@
 package com.example.imcapp
 
+import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Bundle
 import android.widget.TextView
@@ -24,11 +25,14 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private lateinit var btnSubtractWeight: FloatingActionButton
     private lateinit var btnSubtractAge: FloatingActionButton
     private lateinit var btnCalc: androidx.appcompat.widget.AppCompatButton
+    companion object {
+        const val IMC_KEY = "RESULT"
+    }
 
     var  operacion =true
     private var Weight =0
     private var age=0
-
+    private var altura  =0.0
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
@@ -39,12 +43,15 @@ class ImcCalculatorActivity : AppCompatActivity() {
         initComponents()
         initListeners()
         initUI()
+
+
+
     }
     private fun initComponents() {
         maleview = findViewById(R.id.maleview)
         femaleview = findViewById(R.id.femaleview)
         rsHeight = findViewById(R.id.rsHeight)
-        tvHeight= findViewById(R.id.tvHeight)
+        tvHeight= findViewById(R.id.result)
         edadNum= findViewById(R.id.edadNum)
         pesoNum= findViewById(R.id.pesoNum)
         btnAddWeight= findViewById(R.id.btnAddAge)
@@ -52,6 +59,7 @@ class ImcCalculatorActivity : AppCompatActivity() {
         btnAddAge= findViewById(R.id.btnAddAge2)
         btnSubtractAge= findViewById(R.id.btnSubtractAge2)
         btnCalc= findViewById(R.id.btnCalc)
+
     }
 
     private fun initListeners() {
@@ -64,7 +72,7 @@ class ImcCalculatorActivity : AppCompatActivity() {
         }
         
         rsHeight.addOnChangeListener {_,value,_ ->
-
+            this.altura= value.toDouble()
             tvHeight.text= DecimalFormat("#.##").format(value)+"cm"
         }
         btnAddWeight.setOnClickListener {
@@ -85,6 +93,14 @@ class ImcCalculatorActivity : AppCompatActivity() {
         btnSubtractAge.setOnClickListener {
             operacion=false
             setAge(operacion)
+        }
+
+        btnCalc.setOnClickListener {
+
+            calculateIMC()
+            val intentGA = Intent(this, ImcResultActivity::class.java)
+            intentGA.putExtra(IMC_KEY, calculateIMC())
+            startActivity(intentGA)
         }
 
 
@@ -125,5 +141,13 @@ class ImcCalculatorActivity : AppCompatActivity() {
         setGenderColor(true)
         setAge(operacion)
         setWeight(operacion)
+    }
+
+    private fun  calculateIMC(): Double {
+    var resultado :Double
+   // var Altura = rsHeight.valueFrom.toDouble()/100
+    resultado = this.Weight/((this.altura/100)*(this.altura/100))
+    return resultado
+
     }
 }

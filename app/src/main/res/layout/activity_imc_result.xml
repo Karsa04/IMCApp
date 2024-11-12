@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="32dp"
+    tools:context=".ImcResultActivity">
+
+    <TextView
+        android:id="@+id/titu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Tu Resultado"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        >
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewHeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="@color/bg_comp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/titu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TipoPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo de peso"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:textSize="24dp"
+                android:textColor="@color/white"
+                >
+
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvresult"
+                android:text="120cm"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:textColor="@color/white"
+                android:textSize="72sp"
+                android:textStyle="bold"
+                >
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/expl"
+                android:text="Texto Explicativo"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+
+                >
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/ReCalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="80dp"
+        android:layout_marginTop="30dp"
+        android:text="Re-Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewHeight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
